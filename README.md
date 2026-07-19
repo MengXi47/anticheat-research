@@ -1,9 +1,6 @@
 # UE4 Mobile In-Process Overlay — Anti-Cheat Research Sample (Educational & Research Purpose Only)
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
-![Category](https://img.shields.io/badge/Category-Security%20Research-red.svg)
-![Platform](https://img.shields.io/badge/Platform-iOS%20(arm64)-green.svg)
-![Engine](https://img.shields.io/badge/Target-Unreal%20Engine%204-purple.svg)
 
 > English ｜ [繁體中文](README_ZH.md)
 
