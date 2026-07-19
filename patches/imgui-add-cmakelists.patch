@@ -1,0 +1,36 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+new file mode 100644
+index 000000000..b746914ad
+--- /dev/null
++++ b/CMakeLists.txt
+@@ -0,0 +1,30 @@
++cmake_minimum_required(VERSION 3.16)
++
++set(IMGUI_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR})
++
++set(IMGUI_SOURCES
++    ${IMGUI_SRC_DIR}/imgui.cpp
++    ${IMGUI_SRC_DIR}/imgui_draw.cpp
++    ${IMGUI_SRC_DIR}/imgui_tables.cpp
++    ${IMGUI_SRC_DIR}/imgui_widgets.cpp
++    ${IMGUI_SRC_DIR}/backends/imgui_impl_metal.mm
++)
++
++add_library(imgui STATIC ${IMGUI_SOURCES})
++
++target_include_directories(imgui PUBLIC
++    ${IMGUI_SRC_DIR}
++    ${IMGUI_SRC_DIR}/backends
++)
++
++set_source_files_properties(
++    ${IMGUI_SRC_DIR}/backends/imgui_impl_metal.mm
++    PROPERTIES COMPILE_FLAGS "-fobjc-arc"
++)
++
++target_compile_options(imgui PRIVATE
++    -fvisibility=hidden
++    -fvisibility-inlines-hidden
++    -Wno-deprecated-declarations
++    -Wno-unused-parameter
++)

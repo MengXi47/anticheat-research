@@ -1,0 +1,10 @@
+_build/
+*.dylib
+.DS_Store
+SDK/*.hpp
+SDK/SDK/*.cpp
+SDK/SDK/*.hpp
+SDK/SDK/*.h
+assets/*.ttf
+assets/*.otf
+*.lookme

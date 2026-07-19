@@ -1,0 +1,11 @@
+CompileFlags:
+  CompilationDatabase: _build
+  # Strip iOS cross-compile flags clangd can't handle when indexing on host macOS.
+  Remove:
+    - -fvisibility-inlines-hidden
+    - -fobjc-arc
+
+Diagnostics:
+  # Silence "drive letter" / unknown-pragma noise that comes from upstream imgui.
+  Suppress:
+    - -Wunused-parameter
